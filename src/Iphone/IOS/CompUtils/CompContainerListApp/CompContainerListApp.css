@@ -1,0 +1,18 @@
+.container_list_app{
+    width: 100vw;
+    min-width: 20rem;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_apps{
+    width: 60em;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}

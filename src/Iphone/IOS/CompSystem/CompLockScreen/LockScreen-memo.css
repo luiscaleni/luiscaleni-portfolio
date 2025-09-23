@@ -1,0 +1,177 @@
+#lockScreen{
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#contElemLockScreen{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#groupScreen{
+    width: 100%;
+    height: 100%;
+    min-width: 25em;
+    min-height: 39em;
+    margin-top: 4em;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#groupScreenTop{
+    width: 100%;
+    height: 13vh;
+    max-height: 8em;
+    /*width: 25em;
+    height: 8em;*/
+    opacity: 0.6;
+    text-shadow: 0 0 0.5em #000;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#dateScreen{
+    width: 100%;
+    height: auto;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hourScreen{
+    width: 100%;
+    height: 0.8em;
+    font-size: 6em;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*
+    Inicio
+    lockScreen Memoji
+*/
+#lockScreenMemoji{
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#lockScreenMemoji > #memoji{
+    width: 28vh;
+    height: auto;
+    max-width: 16em;
+    transform: translateY(-1.5em);
+}
+/* Fin - lockScreen Memoji*/
+
+
+
+
+
+#groupScreenDown{
+    position: absolute;
+    bottom: 0;
+    width: 25em;
+    height: 9vh;
+    max-height: 6em;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.optionIconScreen{
+    width: 3em;
+    height: auto;
+    padding: 0.8em;
+    border-radius: 3em;
+    background-color: var(--bg-color-a);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.optionIconScreen > img{
+    width: 100%;
+    height: auto;
+}
+
+#unlockOption{
+    width: auto;
+    height: 3em;
+    cursor: pointer;
+    padding: 0 1em 0 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#unlockBySliding{
+    width: auto;
+    height: 100%;
+    padding: 0 1em 0.5em 1em;
+    font-size: 1em;
+    text-shadow: 0 0 0.5em black;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
+
+.up{
+    transition:all ease-in-out 1s;
+    margin-bottom: 3em;
+    color: #e7d35d;
+}
+.lockScreen{
+    animation: lockScreen;
+    animation-duration: 600ms;
+}
+.unlockScreen{
+    animation: unlockScreen;
+    animation-duration: 600ms;
+}
+@keyframes lockScreen{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0em);
+    }
+}
+@keyframes unlockScreen{
+    0%{
+        transform: translateY(0em);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}

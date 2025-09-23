@@ -1,0 +1,194 @@
+@import "../CompApps/Camera/Camera.css";
+#cont_home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 50em;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+#navHome {
+    width: 100%;
+    height: 3.5em;
+}
+.content_windows{
+    width: 100%;
+    height: 50em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#splide01{
+    width: 100%;
+    height: 100%;
+    min-height: 38.5em;
+
+    display: flex;
+    justify-content: center;
+}
+#splide01-track{
+    width: 100%;
+    height: 100%;
+}
+.splide__slide{
+    width: var(--width);
+    height: var(--height);
+    min-height: 31.25em;
+    max-height: var(--width);
+
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    /*
+    flex-direction: column;*/
+}
+.splide__arrow--prev, .splide__arrow--next {
+    display: none;
+}
+.splide__pagination{
+    bottom: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splide__pagination li{
+    padding: 0.1em;
+}
+.splide__pagination__page.is-active{
+    width: 0.7em;
+    height: 0.7em;
+}
+.splide__pagination__page{
+    width: 0.7em;
+    height: 0.7em;
+}
+
+#finder{
+    width: auto;
+    height: 2.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 1em 0.9em 1em 0.5em;
+    border-radius: 2.5em;
+    background-color: var(--bg-color-a);
+    backdrop-filter: var(--blur);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#finder > img{
+    width: 0.8em;
+    margin: 0 0.4em;
+}
+#contFSReplace{
+    position: absolute;
+    z-index:40;
+    width: 100%;
+    height:100%;
+    border-radius: var(--border-radius);
+    
+    overflow-y:auto;
+    overflow-x: hidden;
+    background-color: #000;
+    transform: scale(1);
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contFS{
+    position: absolute;
+    z-index: 49;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:2em;
+    animation: showApp;
+    animation-duration:500ms;
+    transition: all ease-in-out .3s;
+    overflow-y:auto;
+    overflow-x: hidden;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contFS > .appImg,
+#contFSReplace > .appImg{
+    top: 19em;
+    width: 3.5em;
+    height: auto;
+    margin: 0.25em;
+}
+#contFS > .content_app_widget > img,
+#contFSReplace > .content_app_widget > img{
+    width: 6em;
+    height: auto;
+    border-radius: 1.3em;
+    box-shadow: 0 0 0.6em #2b2b2b;
+}
+#contFS > .content_app_widget > span{
+    display: none;
+}
+#contFSReplace > .content_app_widget > span{
+    display: block;
+    transform:translateY(2em);
+    animation: textApp;
+    animation-duration: 1s;
+}
+@keyframes textApp{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(2em);
+    }
+}
+#contFS > .content_app_widget > p,
+#contFSReplace > .content_app_widget > p{
+    position: absolute;
+    bottom: 6em;
+    color: rgb(100 131 155);
+}
+#contFSReplace > img{
+    position: absolute;
+    top: 1.5vh;
+}
+
+.hideApp{
+    animation: hideApp;
+    animation-duration: 500ms;
+}
+
+@keyframes showApp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes hideApp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}

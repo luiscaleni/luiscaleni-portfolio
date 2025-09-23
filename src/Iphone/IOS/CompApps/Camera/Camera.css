@@ -1,0 +1,33 @@
+#video{
+    position: absolute;
+    z-index: 50;
+    width: auto;
+    height: 100vh;
+    background-color: black;
+    transition: all ease-in-out 1s;
+
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+
+    display: none;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.hideAppCamera{
+    animation: hideAppCamera;
+    animation-duration: 500ms;
+}
+@keyframes hideAppCamera {
+    0% {
+        transform: scale(1);
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
