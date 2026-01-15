@@ -20,7 +20,9 @@ function fnDevices(){
         )
 
         Promise.all([
-            coffeeSoda.load()
+            coffeeSoda.load(),
+            chocoShake.load(),
+            sfPro.load()
         ]).then((fonts) => {
             fonts.forEach(font => document.fonts.add(font))
             fontsLoaded = true
