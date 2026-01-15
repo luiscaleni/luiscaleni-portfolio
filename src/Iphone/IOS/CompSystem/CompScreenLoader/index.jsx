@@ -1,11 +1,13 @@
-import React, {useEffect} from "react"
+import {useEffect} from "react"
 import "./ScreenLoader.css"
+import logo from "../../public/appleLogo.png"
+import { CONFIG } from "../../Const/Const"
 
 export default function ScreenLoader(){
     useEffect(()=>{
         let screenLoader = document.getElementById("screenLoader")
-        let main = document.getElementById("main") 
-        if (main) {
+        let contIos = document.getElementById("contIos") 
+        if (contIos) {
             setTimeout(() => {
                 screenLoader.remove()
             }, 5000)
@@ -16,14 +18,14 @@ export default function ScreenLoader(){
         <>
             <div id="screenLoader">
                 <div id="contLoader">
-                    <img src="/appleLogo.png"/>
+                    <img src={logo} alt="Logo"/>
                     <div id="contLoad">
                         <div id="load"></div>
                     </div>
                 </div>
                 <div id="copyright">
-                    <p id="author">PORTFOLIO: LUIS CALENI V.</p>
-                    <p id="versionDate">v. 1.5.3 - 12/05/2025</p>
+                    <p id="author">{CONFIG.AUTHOR}</p>
+                    <p id="versionDate">{CONFIG.APP_VERSION} - {CONFIG.DATE_VERSION}</p>
                 </div>
             </div>
         </>

@@ -1,9 +1,9 @@
 import React from "react";
 import './Nav.css'
-import wifi from "/assets/icons/wifi.svg"
-import wifi_black from "/assets/icons/wifi_black.svg"
-import signal from "/assets/icons/signal.svg"
-import signal_black from "/assets/icons/signal_black.svg"
+import wifi from "../../public/assets/icons/wifi.svg"
+import wifi_black from "../../public/assets/icons/wifi_black.svg"
+import signal from "../../public/assets/icons/signal.svg"
+import signal_black from "../../public/assets/icons/signal_black.svg"
 
 export default function Nav(){
     return (
@@ -12,7 +12,7 @@ export default function Nav(){
         <nav id="nav">
             <p id="hour"></p>
             <div id="info">
-                <div id="cameraDI"></div>
+                
                 <div id="contConectivity">
                     <div id="contElementsInfo">
                         <div className="contIconNavBar">

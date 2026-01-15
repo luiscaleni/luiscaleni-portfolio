@@ -2,23 +2,17 @@ import React from "react";
 import './AppIcons.css'
 
 let addClassApp
-let ctn
+const imgSrcBase = "src/Iphone/IOS/public/assets/icons/"
 
-export default function AppIcons({name, classNameApp, id="", text, contTotalValue}){
+export default function AppIcons({name, classNameApp, id="", text}){
     addClassApp = classNameApp + " app"
-
-    if(contTotalValue == "home"){
-        ctn="home"
-    }else{
-        ctn=""
-    }
 
 return (
     <>
-        <div className="contTotal" id={ctn}>
+        <div className="contTotal">
             <div className="contToggle">
                 <div className="content_app_widget">
-                    <img src={"/assets/icons/"+ name + ".svg"} className={addClassApp} id={id} />
+                    <img src={imgSrcBase + name + ".svg"} className={addClassApp} id={id} />
                     <span className="textApp">{text}</span>
                 </div>
             </div>

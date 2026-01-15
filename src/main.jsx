@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Iphone from './Iphone'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Iphone from './Iphone'
 
 const routes = [
   {

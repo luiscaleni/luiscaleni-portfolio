@@ -10,7 +10,7 @@ export default function Notif({imgName, title, text, index=""}){
     }else{
         classNotif="notif"
     }
-    imgNameSrc= "/assets/persons/" + imgName + ".png"
+    imgNameSrc= "src/Iphone/IOS/public/assets/persons/" + imgName + ".png"
     
     return (
         <>

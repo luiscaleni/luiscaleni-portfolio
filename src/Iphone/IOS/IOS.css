@@ -1,17 +1,7 @@
-#splide__slide {
-    position: absolute;
-    width: var(--width);
-    height: var(--height);
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 #ios{
     position: relative;
     width: var(--width);
     height: var(--height);
-    border-radius: 2em;
 
     overflow: hidden;
     background-image: var(--bg-image);
@@ -24,7 +14,15 @@
     justify-content: center;
     align-items: center;
 }
+#splide__slide {
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .iconHomePosition_appImg{
     transform: scale(2) translateY(50em);
 }
@@ -34,10 +32,10 @@
 }
 @keyframes iconEffectAppImg{
     0%{
-        transform: scale(2) translateY(50em);
+        transform: scale(2) translateY(50rem);
     }
     85%{
-        transform: scale(0.8) translateY(0em);
+        transform: scale(0.8) translateY(0rem);
     }
     100%{
         transform: scale(1);
@@ -65,6 +63,8 @@
 
 
 #contIos{
+    width: var(--width);
+    height: var(--height);
     border-radius: var(--border-radius);
 }
 /**/

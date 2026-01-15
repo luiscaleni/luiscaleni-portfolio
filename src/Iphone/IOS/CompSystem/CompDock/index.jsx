@@ -1,6 +1,6 @@
-import React from "react";
-import './Dock.css';
-import AppIcons from "../CompAppIcons";
+import React from "react"
+import './Dock.css'
+import AppIcons from "../CompAppIcons"
 
 export default function Dock(){
     
@@ -12,8 +12,6 @@ export default function Dock(){
                     <AppIcons name="apple-music" classNameApp="appImg" id="AppleMusic"/>
                     <AppIcons name="ios-message" classNameApp="appImg" id="Message"/>               
                     <AppIcons name="mail" classNameApp="appImg" id="Mail"/>
-                    <AppIcons name="contacts" classNameApp="appImg" id="Contacts"/>
-                    <AppIcons name="notes" classNameApp="appImg" id="Notes" />
                 </div>
             </div>
         </>

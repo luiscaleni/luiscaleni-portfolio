@@ -168,8 +168,8 @@ function fnClock(){
                 let hourLandscape = document.getElementById("hourLandscape")
                 let dateLandscape = document.getElementById("dateLandscape")
                 
-                let fuenteUno = new FontFace('coffeeSoda',"url(fonts/coffee_soda.ttf) format('truetype')" )
-                let fuenteDos = new FontFace('chocoShake',"url(fonts/choco_shake.ttf) format('truetype')" )
+                let fuenteUno = new FontFace('coffeeSoda',"url(src/Iphone/IOS/public/fonts/coffee_soda.ttf) format('truetype')" )
+                let fuenteDos = new FontFace('chocoShake',"url(src/Iphone/IOS/public/fonts/choco_shake.ttf) format('truetype')" )
             
                 document.fonts.add(fuenteUno)
                 document.fonts.add(fuenteDos)
@@ -183,10 +183,10 @@ function fnClock(){
                         dateLandscape.innerHTML = myCurrentDate
                     }else if(lockScreen.classList.contains("unlockScreen")){
                         let hour =  document.getElementById("hour")
-                        hour.innerHTML= myCurrentHour+", "+myCurrentDate //incluir hour en elemento
+                        hour.innerHTML= myCurrentHour//+", "+myCurrentDate //incluir hour en elemento
             
                         hourLandscape.innerHTML = myCurrentHour 
-                        dateLandscape.innerHTML = myCurrentDate
+                        //dateLandscape.innerHTML = myCurrentDate
                     }
                 }else{
                     hour =  document.getElementById("hour")

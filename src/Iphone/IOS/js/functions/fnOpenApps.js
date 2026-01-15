@@ -19,7 +19,7 @@ export default function fnOpenApps(){
                     appCamera()
                     appCameraMemoji()                    
                 }else{
-                    iframe.src=`/pages/${e}.html`
+                    iframe.src=`src/Iphone/IOS/public/pages/${e}.html`
                     contFSReplace.appendChild(iframe)
                 }
                 contFSReplace.removeChild(contFSReplaceChild)   

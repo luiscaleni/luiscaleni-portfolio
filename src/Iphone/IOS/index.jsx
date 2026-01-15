@@ -1,5 +1,3 @@
-import React from "react"
-
 import "./IOS.css"
 import LockScreen from "./CompSystem/CompLockScreen"
 import ButtonHome from "./CompSystem/CompButtonHome"

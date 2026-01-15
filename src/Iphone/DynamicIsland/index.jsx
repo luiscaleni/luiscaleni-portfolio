@@ -1,7 +1,6 @@
-import React from "react";
 import './DynamicIsland.css'
 
-export default function DynamicIsland(){
+function DynamicIsland(){
     return (
             <div id="dynamic_island">
                 <div id="sensorDI"></div>
@@ -9,3 +8,5 @@ export default function DynamicIsland(){
             </div>
     )
 }
+
+export default DynamicIsland

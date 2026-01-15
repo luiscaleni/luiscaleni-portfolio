@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 8.75rem;
     z-index: 40;
 
     display: flex;
@@ -10,12 +10,14 @@
     align-items: center;
 }
 .dock{
-    width: auto;
-    height: auto;
-    max-width: 50em;
-    margin-bottom: 1.3em;
-    padding: 0.3em;    
-    border-radius: 1.5em;
+    width:auto;
+    height: calc(4rem + 2.5rem);
+    overflow: hidden;
+    max-width: 25em;
+    padding: 1.25rem;
+    margin: 1.1rem;
+       
+    border-radius: var(--border-radius-2);
     backdrop-filter: blur(0.5em);
     background-color: var(--bg-color-a);
     

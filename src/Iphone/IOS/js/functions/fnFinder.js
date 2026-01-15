@@ -11,7 +11,7 @@ function fnFinder(){
                 let childs = splidePagination.childNodes
             
                 divFinder.id="finder"
-                imgFinder.src="/assets/iconsSystem/finder.png"
+                imgFinder.src="src/Iphone/IOS/public/assets/iconsSystem/finder.png"
                 buscar.textContent="Buscar"
                 childs[0].style.display="none"
                 childs[1].style.display="none"

@@ -1,0 +1,5 @@
+export const CONFIG = {
+  AUTHOR: 'PORTFOLIO: LUIS CALENI V.',
+  APP_VERSION: 'v. 2.0',
+  DATE_VERSION: '15/01/2026'
+}

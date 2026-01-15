@@ -1,5 +1,5 @@
 function fnDevices(){
-    let sfPro = new FontFace('sfPro',"url(fonts/sf_pro.ttf) format('truetype')" )
+    let sfPro = new FontFace('sfPro',"url(src/Iphone/IOS/public/fonts/sf_pro.ttf) format('truetype')" )
     document.fonts.add(sfPro)    
     setTimeout(() => {
         let root = document.getElementById("root")

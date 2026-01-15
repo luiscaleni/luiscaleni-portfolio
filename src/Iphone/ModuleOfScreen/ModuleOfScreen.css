@@ -1,0 +1,11 @@
+.moduleOfScreen{
+  z-index: 2;
+  position: relative;
+  width: auto;
+  height: auto;
+  border-radius: calc(var(--border-radius) + 0.5rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
