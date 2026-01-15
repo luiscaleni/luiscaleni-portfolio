@@ -12,8 +12,6 @@ const pages = import.meta.glob(
 )
 
 export default function fnOpenApps(){
-    const pageUrl = pages[`../../public/pages/${e}.html`]
-
     if (document.getElementById("contFSReplace")) {
         let contFSReplace = document.getElementById("contFSReplace")
         let contFSReplaceChild = contFSReplace.firstChild
@@ -30,6 +28,7 @@ export default function fnOpenApps(){
                     appCamera()
                     appCameraMemoji()                    
                 }else{
+                    const pageUrl = pages[`../../public/pages/${e}.html`]
                     if (pageUrl) {
                         iframe.src = pageUrl
                         contFSReplace.appendChild(iframe)
