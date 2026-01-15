@@ -1,3 +1,5 @@
+import finderIcon from '../../public/assets/iconsSystem/finder.png'
+
 function fnFinder(){
     window.addEventListener("load", ()=>{
         let main = document.getElementById("main")
@@ -11,7 +13,7 @@ function fnFinder(){
                 let childs = splidePagination.childNodes
             
                 divFinder.id="finder"
-                imgFinder.src="src/Iphone/IOS/public/assets/iconsSystem/finder.png"
+                imgFinder.src=finderIcon
                 buscar.textContent="Buscar"
                 childs[0].style.display="none"
                 childs[1].style.display="none"

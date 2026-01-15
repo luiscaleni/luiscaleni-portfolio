@@ -2,7 +2,18 @@ import appsData from "./appsData"
 import appCamera from "../appJs/appCamera"
 import appCameraMemoji from "../appJs/appCameraMemoji" 
 
+const pages = import.meta.glob(
+  '../../public/pages/*.html',
+  { 
+    eager: true,
+    query: '?url',
+    import: 'default'
+  }
+)
+
 export default function fnOpenApps(){
+    const pageUrl = pages[`../../public/pages/${e}.html`]
+
     if (document.getElementById("contFSReplace")) {
         let contFSReplace = document.getElementById("contFSReplace")
         let contFSReplaceChild = contFSReplace.firstChild
@@ -19,8 +30,10 @@ export default function fnOpenApps(){
                     appCamera()
                     appCameraMemoji()                    
                 }else{
-                    iframe.src=`src/Iphone/IOS/public/pages/${e}.html`
-                    contFSReplace.appendChild(iframe)
+                    if (pageUrl) {
+                        iframe.src = pageUrl
+                        contFSReplace.appendChild(iframe)
+                    }
                 }
                 contFSReplace.removeChild(contFSReplaceChild)   
             }else{

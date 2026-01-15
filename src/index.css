@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 :root {
-  font-family: sfPro;
+  src: url("./Iphone/IOS/public/fonts/sf_pro.ttf") format("truetype");
+  font-family: "sf_pro, verdana, sans-serif";
   line-height: 1.5;
   font-weight: 400;
 

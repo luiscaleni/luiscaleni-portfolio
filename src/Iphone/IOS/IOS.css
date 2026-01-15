@@ -1,7 +1,9 @@
 #ios{
     position: relative;
-    width: var(--width);
-    height: var(--height);
+    min-width: var(--width);
+    min-height: var(--height);
+    width: 100%;
+    height: 100%;
 
     overflow: hidden;
     background-image: var(--bg-image);

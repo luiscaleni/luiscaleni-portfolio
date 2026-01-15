@@ -7,7 +7,7 @@
 
     border-radius: var(--border-radius);
     border: 0.5rem solid black;
-    box-shadow: inset 0 0 1rem 1rem #f00;
+    box-shadow: inset 0 0 0.5rem 0.3rem #000;
 
     background-color: black;
     background-size:cover;

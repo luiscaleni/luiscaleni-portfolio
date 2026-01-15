@@ -1,8 +1,16 @@
-import React from "react"
 import './Notif.css'
 
 let classNotif
 let imgNameSrc
+
+const persons = import.meta.glob(
+  '../../public/assets/persons/*.png',
+  { 
+    eager: true,
+    query: '?url',
+    import: 'default'
+  }
+)
 
 export default function Notif({imgName, title, text, index=""}){
     if (index) {
@@ -10,13 +18,18 @@ export default function Notif({imgName, title, text, index=""}){
     }else{
         classNotif="notif"
     }
-    imgNameSrc= "src/Iphone/IOS/public/assets/persons/" + imgName + ".png"
+    const imgSrc = persons[`../../public/assets/persons/${imgName}.png`]
+
+    if (!imgSrc) {
+    console.warn(`Icono no encontrado: ${imgName}.png`)
+    return null
+    }
     
     return (
         <>
             <div className="contNotif">
                 <div className={classNotif}>
-                    <img src={imgNameSrc} className="imgNotif" />
+                    <img src={imgSrc} className="imgNotif" />
                     <div id="contentTextNotif">
                         <h4>{title}</h4>
                         <p>{text}</p>

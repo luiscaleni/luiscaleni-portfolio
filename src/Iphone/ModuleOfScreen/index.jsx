@@ -1,6 +1,6 @@
 
 import './ModuleOfScreen.css'
-import DynamicIsland from '../DynamicIsland'
+import DynamicIsland from './DynamicIsland'
 
 function ModuleOfScreen({children}) {
     return ( 

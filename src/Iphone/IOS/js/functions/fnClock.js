@@ -2,6 +2,7 @@ function fnClock(){
     setTimeout(() => {
         let screenLoader = document.getElementById("screenLoader")
         if (screenLoader) {
+
             function myHour() {
                 let currentDate = new Date() //Actualizar myDate.
             
@@ -168,11 +169,6 @@ function fnClock(){
                 let hourLandscape = document.getElementById("hourLandscape")
                 let dateLandscape = document.getElementById("dateLandscape")
                 
-                let fuenteUno = new FontFace('coffeeSoda',"url(src/Iphone/IOS/public/fonts/coffee_soda.ttf) format('truetype')" )
-                let fuenteDos = new FontFace('chocoShake',"url(src/Iphone/IOS/public/fonts/choco_shake.ttf) format('truetype')" )
-            
-                document.fonts.add(fuenteUno)
-                document.fonts.add(fuenteDos)
             
                 if (lockScreen) {
                     if (lockScreen.classList.contains("lockScreen")) {

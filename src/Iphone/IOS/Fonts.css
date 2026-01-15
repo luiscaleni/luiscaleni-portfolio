@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "sf_pro";
+  src: url("./public/fonts/sf_pro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "coffeeSoda";
+  src: url("./public/fonts/coffee_soda.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "chocoShake";
+  src: url("./public/fonts/choco_shake.ttf") format("truetype");
+}
