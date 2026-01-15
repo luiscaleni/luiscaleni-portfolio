@@ -21,8 +21,8 @@ function fnDevices(){
 
         Promise.all([
             coffeeSoda.load()
-        ]).then(() => {
-            font => document.fonts.add(font)
+        ]).then((fonts) => {
+            fonts.forEach(font => document.fonts.add(font))
             fontsLoaded = true
         }).catch(err => {
             console.error("Error cargando fuentes:", err)
@@ -34,14 +34,9 @@ function fnDevices(){
         let root = document.getElementById("root")
         let main = document.getElementById("main")
         let contIos =document.getElementById("contIos")
-        let contLoader = document.getElementById("contLoader")
         
         let mainCreate = document.createElement("div")
         mainCreate.id="main"
-    
-        let p = document.createElement("p")
-        p.id="adaptP"
-        p.textContent="Prueba desde una computadora."
     
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {          
 
@@ -52,7 +47,6 @@ function fnDevices(){
             mainCreate.appendChild(contIos)
             contIos.removeAttribute("id")
             contIos.id="addContIos"
-            //root.appendChild(p)
         }
     }, 10)
 }

@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 :root {
-  src: url("./Iphone/IOS/public/fonts/sf_pro.ttf") format("truetype");
   line-height: 1.5;
   font-weight: 400;
 
