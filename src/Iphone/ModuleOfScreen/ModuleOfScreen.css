@@ -1,9 +1,10 @@
 .moduleOfScreen{
   z-index: 2;
   position: relative;
+  overflow: hidden;
   width: auto;
   height: auto;
-  border-radius: calc(var(--border-radius) + 0.5rem);
+  border-radius: var(--border-radius);
 
   display: flex;
   justify-content: center;
