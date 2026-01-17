@@ -9,7 +9,7 @@
     align-items: flex-start;
 }
 .container_apps{
-    width: 90%;
+    width: calc(var(--width) - 8%);
     height: auto;
 
     display: flex;

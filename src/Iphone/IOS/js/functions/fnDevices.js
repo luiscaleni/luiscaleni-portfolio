@@ -6,17 +6,17 @@ function fnDevices(){
         
         const sfPro = new FontFace(
             'sfPro',
-            `url(${new URL("../../public/fonts/sf_pro.ttf", import.meta.url)}) format('truetype')`
+            `url(${new URL("/fonts/sf_pro.ttf", import.meta.url)}) format('truetype')`
         )
 
         const coffeeSoda = new FontFace(
             "coffeeSoda",
-            `url(${new URL("../../public/fonts/coffee_soda.ttf", import.meta.url)})`
+            `url(${new URL("/fonts/coffee_soda.ttf", import.meta.url)})`
         )
 
         const chocoShake = new FontFace(
             "chocoShake",
-            `url(${new URL("../../public/fonts/choco_shake.ttf", import.meta.url)})`
+            `url(${new URL("/fonts/choco_shake.ttf", import.meta.url)})`
         )
 
         Promise.all([
@@ -44,8 +44,8 @@ function fnDevices(){
 
             main.remove()
             
-            root.appendChild(mainCreate)
             root.style.backgroundColor="black"
+            root.appendChild(mainCreate)
             mainCreate.appendChild(contIos)
             contIos.removeAttribute("id")
             contIos.id="addContIos"

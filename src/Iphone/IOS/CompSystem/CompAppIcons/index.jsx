@@ -2,7 +2,7 @@ import './AppIcons.css'
 
 // importa todos los svg del directorio
 const icons = import.meta.glob(
-  '../../public/assets/icons/*.svg',
+  '../../static/assets/icons/*.svg',
   { 
     eager: true,
     query: '?url',
@@ -11,7 +11,7 @@ const icons = import.meta.glob(
 )
 
 export default function AppIcons({name, classNameApp="", id="", text}){
-    const imgSrc = icons[`../../public/assets/icons/${name}.svg`]
+    const imgSrc = icons[`../../static/assets/icons/${name}.svg`]
 
     if (!imgSrc) {
     console.warn(`Icono no encontrado: ${name}.svg`)

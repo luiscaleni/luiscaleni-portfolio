@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+</head>
+<style>
+    body{
+        overflow-x: hidden;
+        user-select: none;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <script type="module">
+        const cvUrl = new URL('/cv.jpg', import.meta.url).href;
+        const img = document.getElementById('imgCV')
+
+        img.src = cvUrl
+    </script>
+    <img id="imgCV" alt="Curriculum Vitae">
+</body>
+</html>

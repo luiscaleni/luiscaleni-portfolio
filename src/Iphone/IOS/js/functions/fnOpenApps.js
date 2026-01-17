@@ -3,7 +3,7 @@ import appCamera from "../appJs/appCamera"
 import appCameraMemoji from "../appJs/appCameraMemoji" 
 
 const pages = import.meta.glob(
-  '../../public/pages/*.html',
+  '../../static/pages/*.html',
   { 
     eager: true,
     query: '?url',
@@ -28,7 +28,7 @@ export default function fnOpenApps(){
                     appCamera()
                     appCameraMemoji()                    
                 }else{
-                    const pageUrl = pages[`../../public/pages/${e}.html`]
+                    const pageUrl = pages[`../../static/pages/${e}.html`]
                     if (pageUrl) {
                         iframe.src = pageUrl
                         contFSReplace.appendChild(iframe)

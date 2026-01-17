@@ -1,4 +1,4 @@
-import finderIcon from '../../public/assets/iconsSystem/finder.png'
+import finderIcon from '../../static/assets/iconsSystem/finder.png'
 
 function fnFinder(){
     window.addEventListener("load", ()=>{

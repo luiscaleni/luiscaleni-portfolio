@@ -1,9 +1,9 @@
 import React from "react";
 import './Nav.css'
-import wifi from "../../public/assets/icons/wifi.svg"
-import wifi_black from "../../public/assets/icons/wifi_black.svg"
-import signal from "../../public/assets/icons/signal.svg"
-import signal_black from "../../public/assets/icons/signal_black.svg"
+import wifi from "../../static/assets/icons/wifi.svg"
+import wifi_black from "../../static/assets/icons/wifi_black.svg"
+import signal from "../../static/assets/icons/signal.svg"
+import signal_black from "../../static/assets/icons/signal_black.svg"
 
 export default function Nav(){
     return (

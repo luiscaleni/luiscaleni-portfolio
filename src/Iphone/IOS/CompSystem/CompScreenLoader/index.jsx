@@ -1,6 +1,6 @@
 import {useEffect} from "react"
 import "./ScreenLoader.css"
-import logo from "../../public/assets/persons/luis.png"
+import logo from "../../static/assets/persons/luis.png"
 import { CONFIG } from "../../Const/Const"
 
 export default function ScreenLoader(){

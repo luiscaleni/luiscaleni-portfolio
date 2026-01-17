@@ -15,7 +15,7 @@
   --height: 54.625rem;
   --border-radius: 4.2rem; /*1.625rem;*/
   --border-radius-2: 2.5rem;/*3.8rem;*/
-  --bg-image: url("./Iphone/IOS/public/assets/wp/wp.jpg");
+  --bg-image: url("./Iphone/IOS/static/assets/wp/wp.jpg");
   --bg-color-a: rgba(138, 135, 135, 0.4);
   --bg-color-a2: rgba(61, 58, 61, 0.9);
   --blur: blur(0.6rem);

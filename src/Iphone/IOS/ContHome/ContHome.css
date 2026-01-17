@@ -25,8 +25,8 @@
     align-content: center;
 }
 #splide01{
-    width: var(--width);
-    height: calc(var(--height) - 3.5rem);
+    width: 100%;
+    height: calc(100% - 3.5rem);
 
     display: flex;
     justify-content: center;

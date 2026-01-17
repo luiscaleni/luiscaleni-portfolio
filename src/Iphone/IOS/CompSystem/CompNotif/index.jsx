@@ -4,7 +4,7 @@ let classNotif
 let imgNameSrc
 
 const persons = import.meta.glob(
-  '../../public/assets/persons/*.png',
+  '../../static/assets/persons/*.png',
   { 
     eager: true,
     query: '?url',
@@ -18,7 +18,7 @@ export default function Notif({imgName, title, text, index=""}){
     }else{
         classNotif="notif"
     }
-    const imgSrc = persons[`../../public/assets/persons/${imgName}.png`]
+    const imgSrc = persons[`../../static/assets/persons/${imgName}.png`]
 
     if (!imgSrc) {
     console.warn(`Icono no encontrado: ${imgName}.png`)
