@@ -20,15 +20,17 @@ export default function ScreenLoader(){
     return(
         <>
             <div id="screenLoader">
-                <div id="contLoader">
-                    <img src={logo} alt="Logo"/>
-                    <div id="contLoad">
-                        <div id="load"></div>
+                <div id="cont">
+                    <div id="contLoader">
+                        <img src={logo} alt="Logo"/>
+                        <div id="contLoad">
+                            <div id="load"></div>
+                        </div>
                     </div>
-                </div>
-                <div id="copyright">
-                    <p id="author">{CONFIG.AUTHOR}</p>
-                    <p id="versionDate">{CONFIG.APP_VERSION} - {CONFIG.DATE_VERSION}</p>
+                    <div id="copyright">
+                        <p id="author">{CONFIG.AUTHOR}</p>
+                        <p id="versionDate">{CONFIG.APP_VERSION} - {CONFIG.DATE_VERSION}</p>
+                    </div>
                 </div>
             </div>
         </>

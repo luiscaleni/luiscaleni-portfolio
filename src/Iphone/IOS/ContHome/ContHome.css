@@ -38,7 +38,7 @@
 .splide__slide{
     position: relative;
     width: var(--width);
-    height: calc(var(--height) - 12.25rem); /*31.25em;*/
+    height: 100%; /*31.25em;*/
 
     display: flex;
     justify-content: flex-start;
@@ -51,8 +51,9 @@
     display: none;
 }
 .splide__pagination{
+    bottom: 8.7rem;
+    padding-bottom: 1rem;
 
-    bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +72,7 @@
 
 #finder{
     position: absolute;
-    bottom: 9rem;
+    bottom: 1rem;
     width: auto;
     height: 2.5em;
     font-size: 0.8em;
