@@ -27,7 +27,7 @@ window.addEventListener("load", ()=>{
                         document.getElementById("contNav").classList.remove("black_blur")
                     }
 
-                    if (document.getElementById("video")) {
+                    if (document.getElementById("video") || document.getElementById("imgCV")) {
                         const videoDom = document.getElementById("video")
                         const activeCamera = document.getElementById("cameraDI")
                         

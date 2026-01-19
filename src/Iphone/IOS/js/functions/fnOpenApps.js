@@ -26,7 +26,9 @@ export default function fnOpenApps(){
             if (id === e) {
                 if(id === "Camera"){
                     appCamera()
-                    appCameraMemoji()                    
+                    appCameraMemoji()
+                    const canvas = document.querySelector("canvas")
+                    document.getElementById("contFSReplace").appendChild(canvas)
                 }else{
                     const pageUrl = pages[`../../static/pages/${e}.html`]
                     if (pageUrl) {

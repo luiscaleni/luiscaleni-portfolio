@@ -5,13 +5,16 @@ import { CONFIG } from "../../Const/Const"
 
 export default function ScreenLoader(){
     useEffect(()=>{
-        let screenLoader = document.getElementById("screenLoader")
-        let contIos = document.getElementById("contIos") 
-        if (contIos) {
-            setTimeout(() => {
+        setTimeout(() => {
+            const screenLoader = document.getElementById("screenLoader")
+            const contIos = document.getElementById("contIos")
+            const addContIos = document.getElementById("addContIos")
+            
+            if (contIos !== null || addContIos !== null) {
+                console.log(contIos, addContIos)
                 screenLoader.remove()
-            }, 5000)
-        }
+            }
+        }, 5000)
     },[])
 
     return(

@@ -10,11 +10,11 @@
     align-items: center;
 }
 .dock{
-    width:auto;
+    width:96%;
+    max-width: 35rem;
     height: calc(4rem + 2.5rem);
     overflow: hidden;
     max-width: 25em;
-    padding: 1.25rem;
     margin: 1.1rem;
        
     border-radius: var(--border-radius-2);

@@ -1,22 +1,34 @@
 function fnDevices(){
     let fontsLoaded = false
+
+    const fonts = import.meta.glob(
+        '../../static/assets/fonts*.ttf',
+        { 
+            eager: true,
+            query: '?url',
+            import: 'default'
+        }
+    )
+    const sf_pro = fonts[`../../static/assets/fonts/sf_pro.ttf`]
+    const coffee_soda = fonts[`../../static/assets/fonts/coffee_soda.ttf`]
+    const choco_shake = fonts[`../../static/assets/fonts/choco_shake.ttf`]
     
     function loadFonts() {
         if (fontsLoaded) return
         
         const sfPro = new FontFace(
             'sfPro',
-            `url(${new URL("/fonts/sf_pro.ttf", import.meta.url)}) format('truetype')`
+            `url(${new URL(sf_pro, import.meta.url)}) format('truetype')`
         )
 
         const coffeeSoda = new FontFace(
             "coffeeSoda",
-            `url(${new URL("/fonts/coffee_soda.ttf", import.meta.url)})`
+            `url(${new URL(coffee_soda, import.meta.url)}) format('truetype')`
         )
 
         const chocoShake = new FontFace(
             "chocoShake",
-            `url(${new URL("/fonts/choco_shake.ttf", import.meta.url)})`
+            `url(${new URL(choco_shake, import.meta.url)}) format('truetype')`
         )
 
         Promise.all([
@@ -33,22 +45,17 @@ function fnDevices(){
 
     setTimeout(() => {
         loadFonts()
-        let root = document.getElementById("root")
-        let main = document.getElementById("main")
-        let contIos =document.getElementById("contIos")
+        const root = document.getElementById("root")
         
-        let mainCreate = document.createElement("div")
-        mainCreate.id="main"
-    
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {          
-
-            main.remove()
-            
             root.style.backgroundColor="black"
-            root.appendChild(mainCreate)
-            mainCreate.appendChild(contIos)
+            const main = document.getElementById("main")
+            const contIos = document.getElementById("contIos").cloneNode(true)
+            
+            main.innerHTML=""
             contIos.removeAttribute("id")
             contIos.id="addContIos"
+            main.appendChild(contIos)
         }
     }, 10)
 }

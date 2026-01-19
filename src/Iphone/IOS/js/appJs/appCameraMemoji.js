@@ -7,8 +7,10 @@ import { FilesetResolver, FaceLandmarker } from "https://cdn.jsdelivr.net/npm/@m
  * the camera.
  */
 export default function appCameraMemoji(){
-    let widthVideo = 1040;
-    let heightVideo = 800;
+    let widthVideo = 402;
+    let heightVideo = 790;
+
+    console.log("appCameraMemoji loaded")
 
 function getViewportSizeAtDepth(camera, depth) {
     const viewportHeightAtDepth = 1 * depth * Math.tan(THREE.MathUtils.degToRad(0.5 * camera.fov));
@@ -59,8 +61,8 @@ class BasicScene {
         // Add a video background
         const video = document.getElementById("video");
         const black = document.createElement("div")
-        black.style.width="1040"
-        black.style.height="800"
+        black.style.width=widthVideo
+        black.style.height=heightVideo
         black.style.backgroundColor="black"
 
         const inputFrameTexture = new THREE.VideoTexture(black);
@@ -203,8 +205,17 @@ class Avatar {
 }
 let faceLandmarker;
 let video;
+const glb = import.meta.glob(
+  '../../static/assets/avatars/*.glb',
+  { 
+    eager: true,
+    query: '?url',
+    import: 'default'
+  }
+)
+const glbElm = glb[`../../static/assets/avatars/raccoon_head.glb`]
 const scene = new BasicScene();
-const avatar = new Avatar("./assets/avatars/raccoon_head.glb", scene.scene);
+const avatar = new Avatar(glbElm, scene.scene);
 if(avatar){
     console.log("Avatar ok")
 }else{
@@ -298,9 +309,6 @@ async function runDemo() {
         outputFacialTransformationMatrixes: true
     });
     console.log("Finished Loading MediaPipe Model.");
-    
-    const canvas = document.querySelector("canvas")
-    document.getElementById("contFSReplace").appendChild(canvas)
 }
 runDemo();
 }

@@ -36,6 +36,9 @@ function fnApps(){
                     cloneContToggleAndContFS.classList.remove("contToggle")
         
                     document.getElementById("ios").appendChild(contToggleAndContFS)
+                    if (document.getElementById("addContIos")) {
+                        document.getElementById("contFSReplace").style.borderRadius="none"
+                    }
         
                     setTimeout(() => {
                         document.getElementById("ios").appendChild(cloneContToggleAndContFS)

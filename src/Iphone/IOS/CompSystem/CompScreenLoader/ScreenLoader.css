@@ -4,7 +4,6 @@
     width: 100vw;
     height: 100vh;
     color: white;
-    overflow: hidden;
     background: black;
     
     display: flex;
@@ -12,23 +11,24 @@
     align-items: center;
     flex-direction: column; 
 }
-#contLoader {
+#screenLoader > #contLoader {
     position: absolute;
     z-index: 501;
     width: 100%;
     height: auto;
     top: 30%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#contLoader img {
+#screenLoader > #contLoader img {
     width: 5.5rem;
     height: 5.5rem;
     border-radius: var(--border-radius);
 }
-#contLoader > #contLoad{
+#screenLoader > #contLoader > #contLoad{
     width: 10em;
     height: 0.2em;
     max-width: 10em;
@@ -40,7 +40,7 @@
     justify-content: flex-start;
     align-items: center;
 }
-#contLoad > #load{
+#screenLoader > #contLoader > #contLoad > #load{
     animation: load 5s normal forwards;
     border-radius: 10em;
     background: #ffffff;
@@ -48,7 +48,7 @@
     width: 0;
 }
 
-#copyright {
+#screenLoader > #copyright {
     position: absolute;
     z-index: 501;
     width: 100vw;
@@ -62,14 +62,14 @@
     align-items: center;
     flex-direction: column;
 }
-#copyright #author {
+#screenLoader > #copyright > #author {
     width: auto;
     min-height: 1em;
     margin: 0.1em;
     font-size: 0.9em;
 }
 
-#copyright #versionDate {
+#screenLoader > #copyright > #versionDate {
     color: white;
     font-size: 0.9em;
 }
