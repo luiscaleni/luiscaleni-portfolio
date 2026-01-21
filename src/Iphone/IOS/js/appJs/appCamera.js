@@ -7,7 +7,11 @@ export default function appCamera(){
     activeCamera.classList.add("activeCamera")
     
     document.addEventListener("click", function(){
-        contFSReplace.appendChild(canvas)
+        if (contFSReplace) {
+            setTimeout(() => {
+                contFSReplace.appendChild(canvas)
+            }, 2000)
+        }
     })
     
     videoDom.id="video"

@@ -10,8 +10,6 @@ export default function appCameraMemoji(){
     let widthVideo = 402;
     let heightVideo = 790;
 
-    console.log("appCameraMemoji loaded")
-
 function getViewportSizeAtDepth(camera, depth) {
     const viewportHeightAtDepth = 1 * depth * Math.tan(THREE.MathUtils.degToRad(0.5 * camera.fov));
     const viewportWidthAtDepth = viewportHeightAtDepth * camera.aspect;
@@ -120,7 +118,7 @@ class Avatar {
                 this.morphTargetMeshes = [];
             }
             this.gltf = gltf;
-            console.log();
+            //console.log();
             this.scene.add(gltf.scene);
             this.init(gltf);
         }/*, 
@@ -135,7 +133,7 @@ class Avatar {
             // Register first bone found as the root
             if (object.isBone && !this.root) {
                 this.root = object;
-                console.log(object);
+                //console.log(object);
             }
             // Return early if no mesh is found.
             if (!object.isMesh) {
@@ -217,9 +215,9 @@ const glbElm = glb[`../../static/assets/avatars/raccoon_head.glb`]
 const scene = new BasicScene();
 const avatar = new Avatar(glbElm, scene.scene);
 if(avatar){
-    console.log("Avatar ok")
+    //console.log("Avatar ok")
 }else{
-    console.log("Avatar error")
+    //console.log("Avatar error")
 }
 function detectFaceLandmarks(time) {
     if (!faceLandmarker) {
@@ -308,7 +306,7 @@ async function runDemo() {
         outputFaceBlendshapes: true,
         outputFacialTransformationMatrixes: true
     });
-    console.log("Finished Loading MediaPipe Model.");
+    //console.log("Finished Loading MediaPipe Model.");
 }
 runDemo();
 }
