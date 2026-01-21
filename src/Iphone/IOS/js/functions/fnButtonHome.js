@@ -53,7 +53,7 @@ window.addEventListener("load", ()=>{
                     document.getElementById("unlockBySliding").classList.add("up")
                     setTimeout(() => {
                         document.getElementById("unlockBySliding").classList.remove("up")
-                    }, 1000)
+                    }, 100)
                 }
             })
         }
