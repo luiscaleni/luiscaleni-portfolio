@@ -1,4 +1,3 @@
-import "./functions/fnDevices"
 import "./functions/fnLocked"
 
 import "./functions/fnClock"
