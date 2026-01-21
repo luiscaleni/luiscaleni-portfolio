@@ -11,7 +11,6 @@ export default function ScreenLoader(){
             const addContIos = document.getElementById("addContIos")
             
             if (contIos || addContIos) {
-                console.log(contIos, addContIos)
                 screenLoader.remove()
             }
         }, 5000)
