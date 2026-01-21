@@ -10,7 +10,7 @@ export default function ScreenLoader(){
             const contIos = document.getElementById("contIos")
             const addContIos = document.getElementById("addContIos")
             
-            if (contIos !== null || addContIos !== null) {
+            if (contIos || addContIos) {
                 console.log(contIos, addContIos)
                 screenLoader.remove()
             }
